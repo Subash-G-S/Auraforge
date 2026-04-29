@@ -98,8 +98,8 @@ const Index = () => {
             Scroll
           </div>
           <div className="mono text-[10px] uppercase tracking-[0.3em] text-ink/50 text-right">
-            <div>120+ Projects</div>
-            <div>45+ Clients · 4 Continents</div>
+            <div>25+ Projects</div>
+            <div>20+ Clients · 4 Continents</div>
           </div>
         </div>
       </section>
@@ -260,8 +260,8 @@ const Index = () => {
                 </a>
               </div>
               <div className="col-span-6 md:col-span-3 mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
-                <div className="text-ink/50 mb-2">Studio</div>
-                Storgatan 14<br />114 51 Stockholm<br />Sweden
+                <div className="text-ink/50 mb-2">Office</div>
+                114 51 Stockholm<br />Coimbatore
               </div>
               <div className="col-span-6 md:col-span-3 mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
                 <div className="text-ink/50 mb-2">Elsewhere</div>
