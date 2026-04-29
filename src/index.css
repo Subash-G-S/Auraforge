@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 30% 96%;
+    --foreground: 25 25% 12%;
+
+    --card: 38 35% 98%;
+    --card-foreground: 25 25% 12%;
+
+    --popover: 38 35% 98%;
+    --popover-foreground: 25 25% 12%;
+
+    --primary: 18 75% 48%;
+    --primary-foreground: 38 30% 96%;
+    --primary-glow: 24 90% 60%;
+
+    --secondary: 25 25% 12%;
+    --secondary-foreground: 38 30% 96%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 12% 38%;
+
+    --accent: 165 35% 28%;
+    --accent-foreground: 38 30% 96%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 38 30% 96%;
+
+    --border: 30 18% 84%;
+    --input: 30 18% 84%;
+    --ring: 18 75% 48%;
+
+    --radius: 0.25rem;
+
+    --ink: 25 25% 12%;
+    --paper: 38 30% 96%;
+    --rust: 18 75% 48%;
+    --sage: 165 25% 32%;
+    --bone: 35 25% 88%;
+
+    --gradient-warm: linear-gradient(135deg, hsl(18 75% 48%), hsl(24 90% 60%));
+    --shadow-soft: 0 30px 60px -30px hsl(25 25% 12% / 0.18);
+    --noise: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html, body {
+    cursor: none;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image: var(--noise);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+  }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .serif { font-family: 'Fraunces', serif; }
+  ::selection { background: hsl(var(--rust)); color: hsl(var(--paper)); }
+
+  @media (max-width: 768px) {
+    html, body { cursor: auto; }
+  }
+}
+
+@layer utilities {
+  .text-ink { color: hsl(var(--ink)); }
+  .text-rust { color: hsl(var(--rust)); }
+  .text-sage { color: hsl(var(--sage)); }
+  .bg-paper { background-color: hsl(var(--paper)); }
+  .bg-ink { background-color: hsl(var(--ink)); }
+  .bg-bone { background-color: hsl(var(--bone)); }
+  .bg-rust { background-color: hsl(var(--rust)); }
+  .bg-sage { background-color: hsl(var(--sage)); }
+  .border-ink { border-color: hsl(var(--ink)); }
+
+  .italic-serif { font-family: 'Fraunces', serif; font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100; }
+
+  .shadow-editorial { box-shadow: var(--shadow-soft); }
+
+  .grain { position: relative; }
+  .grain::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: var(--noise);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .reveal-mask {
+    clip-path: inset(0 100% 0 0);
+    animation: reveal 1.2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  }
+  @keyframes reveal {
+    to { clip-path: inset(0 0 0 0); }
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .link-underline:hover { background-size: 100% 1px; }
+}
