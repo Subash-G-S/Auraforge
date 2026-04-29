@@ -212,7 +212,7 @@ const Index = () => {
       </section>
 
       {/* PROCESS */}
-      <section id="process" className="bg-ink text-paper py-32 md:py-48 grain">
+      <section id="process" data-cursor-section="process" className="bg-ink text-paper py-32 md:py-48 grain">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-12 gap-6 mb-20">
             <div className="col-span-12 md:col-span-3 mono text-[11px] uppercase tracking-[0.25em] text-paper/60">§ Method</div>
@@ -248,22 +248,22 @@ const Index = () => {
             <h2 className="serif text-6xl md:text-9xl font-light leading-[0.9] tracking-tight">
               Let's begin<br /> <span className="italic-serif text-rust">something</span> good.
             </h2>
-            <div className="mt-16 grid grid-cols-12 gap-6">
-              <div className="col-span-12 md:col-span-6">
+            <div className="mt-16 grid md:grid-cols-3 gap-10 items-start">
+              <div className="md:col-span-2">
                 <a
                   href="mailto:aurentratechnologies@gmail.com"
                   data-cursor="view"
                   data-cursor-label="Write"
-                  className="serif text-3xl md:text-5xl italic-serif link-underline inline-block"
+                  className="serif text-2xl sm:text-3xl md:text-5xl italic-serif link-underline inline-block"
                 >
                   aurentratechnologies@gmail.com
                 </a>
               </div>
-              <div className="col-span-6 md:col-span-3 mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
+              <div className="mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
                 <div className="text-ink/50 mb-2">Office</div>
                 114 51 Stockholm<br />Coimbatore
               </div>
-              <div className="col-span-6 md:col-span-3 mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
+              <div className="mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
                 <div className="text-ink/50 mb-2">Elsewhere</div>
                 <a href="#" className="link-underline block">Instagram, ↗</a>
                 <a href="#" className="link-underline block">LinkedIn, ↗</a>
