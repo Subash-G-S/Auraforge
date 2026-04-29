@@ -34,7 +34,7 @@ const Index = () => {
         <nav className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
           <a href="#" data-cursor="hover" className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-rust" />
-            <span className="serif text-xl">Aura<span className="italic-serif">Forge</span></span>
+            <span className="serif text-xl">Aur<span className="italic-serif">entra</span></span>
           </a>
           <div className="hidden md:flex items-center gap-10 mono text-[11px] uppercase tracking-[0.2em] text-ink/70">
             <a href="#work" className="link-underline">Work</a>
@@ -251,12 +251,12 @@ const Index = () => {
             <div className="mt-16 grid grid-cols-12 gap-6">
               <div className="col-span-12 md:col-span-6">
                 <a
-                  href="mailto:hello@atelier-nexora.com"
+                  href="mailto:aurentratechnologies@gmail.com"
                   data-cursor="view"
                   data-cursor-label="Write"
                   className="serif text-3xl md:text-5xl italic-serif link-underline inline-block"
                 >
-                  auraforgesolutions@gmail.com
+                  aurentratechnologies@gmail.com
                 </a>
               </div>
               <div className="col-span-6 md:col-span-3 mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
