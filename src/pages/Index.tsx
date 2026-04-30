@@ -273,7 +273,7 @@ const Index = () => {
               </div>
               <div className="mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
                 <div className="text-ink/50 mb-2">Office</div>
-                114 51 Stockholm<br />Coimbatore
+                Ettimadai<br />Coimbatore
               </div>
               <div className="mono text-[11px] uppercase tracking-[0.25em] text-ink/70 leading-loose">
                 <div className="text-ink/50 mb-2">Elsewhere</div>
