@@ -13,10 +13,10 @@ const services = [
 ];
 
 const works = [
-  { client: "Maison Verre", year: "2025", type: "E-commerce · Web" },
-  { client: "Otori Health", year: "2025", type: "iOS App · Branding" },
-  { client: "Field & Form", year: "2024", type: "Editorial · CMS" },
-  { client: "North Atlas", year: "2024", type: "SaaS Platform" },
+  { client: "Focus Print & Pack", year: "2025", type: "ERP · Web" },
+  { client: "House of Breads", year: "2025", type: "Service · Branding" },
+  { client: "Cake Studio", year: "2026", type: "Service · Web" },
+  { client: "GEMANA", year: "2026", type: "SaaS Platform" },
 ];
 
 const Index = () => {
