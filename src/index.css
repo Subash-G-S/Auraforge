@@ -54,6 +54,17 @@
 html {
   scroll-behavior: smooth;
 }
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.08); /* subtle */
+  opacity: 3.5;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @layer base {
   * {
     @apply border-border;

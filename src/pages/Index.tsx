@@ -22,6 +22,7 @@ const works = [
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
@@ -34,7 +35,7 @@ const Index = () => {
         <nav className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
           <a href="#" data-cursor="hover" className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-rust" />
-            <span className="serif text-xl">Aur<span className="italic-serif">entra</span></span>
+            <span className="serif text-xl">Aurentra</span>
           </a>
           <div className="hidden md:flex items-center gap-10 mono text-[11px] uppercase tracking-[0.2em] text-ink/70">
             <a href="#work" className="link-underline">Work</a>
@@ -53,6 +54,14 @@ const Index = () => {
 
       {/* HERO */}
       <section ref={heroRef} className="relative pt-32 md:pt-40 pb-24 min-h-screen flex flex-col justify-between">
+        <motion.div
+          style={{ y: bgY }}
+          className="pointer-events-none absolute inset-x-0 top-[35%] md:top-1/4 -translate-y-1/2 flex justify-center z-0"
+        >
+          <h1 className="font-aurentra text-[20vw] md:text-[18vw] font-light tracking-tight text-transparent stroke-text">
+            AURENTRA
+          </h1>
+        </motion.div>
         <motion.div style={{ y, opacity }} className="max-w-[1600px] mx-auto px-6 md:px-12 w-full">
           <div className="grid grid-cols-12 gap-6 mb-16">
             <div className="col-span-12 md:col-span-3 mono text-[11px] uppercase tracking-[0.25em] text-ink/60 pt-3">
@@ -82,12 +91,15 @@ const Index = () => {
                 We are a small, opinionated team designing and engineering web platforms, mobile apps and digital identities for ambitious founders and storied institutions alike.
               </p>
             </div>
-            <div className="col-span-12 md:col-span-3 md:col-start-10 text-right">
-              <div className="mono text-[11px] uppercase tracking-[0.25em] text-ink/60">
-                <div>Estd. 2025</div>
-                <div>Coimbatore · Remote</div>
+            <motion.div>
+              <div className="col-span-12 md:col-span-3 md:col-start-10 text-right">
+                <div className="mono text-[11px] uppercase tracking-[0.25em] text-ink/60">
+                  <div>Estd. 2025</div>
+                  <div>Coimbatore</div>
+                </div>
               </div>
-            </div>
+            </motion.div>
+            
           </div>
         </motion.div>
 
@@ -99,7 +111,7 @@ const Index = () => {
           </div>
           <div className="mono text-[10px] uppercase tracking-[0.3em] text-ink/50 text-right">
             <div>25+ Projects</div>
-            <div>20+ Clients · 4 Continents</div>
+            <div>20+ Clients </div>
           </div>
         </div>
       </section>
@@ -276,7 +288,7 @@ const Index = () => {
       {/* FOOTER */}
       <footer className="border-t border-ink/15">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between gap-4 mono text-[10px] uppercase tracking-[0.25em] text-ink/60">
-          <div>© MMXXVI · AuraForge</div>
+          <div>© 2026 · AuraForge</div>
           <div className="serif italic-serif text-base text-ink/80">Made slowly, in Coimbatore.</div>
           <div>All rights, gently reserved.</div>
         </div>

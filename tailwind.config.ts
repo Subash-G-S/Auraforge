@@ -71,6 +71,7 @@ export default {
       },
       fontFamily: {
         display: ['Space Grotesk', 'sans-serif'],
+        montserrat: ['Montserrat', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },
       keyframes: {
